@@ -9,6 +9,7 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 - Retrieves user inventory from the lab tenant
 - Retrieves sign-in summary from the lab tenant
 - Retrieves group inventory from the lab tenant
+- Retrieves disabled user inventory from the lab tenant
 - Exports audit results to CSV files
 
 ## Current outputs
@@ -16,6 +17,7 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 - `sample-output/UserInventory.csv`
 - `sample-output/SignInSummary.csv`
 - `sample-output/GroupInventory.csv`
+- `sample-output/DisabledUserInventory.csv`
 
 ## Project structure
 
@@ -40,4 +42,4 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 
 ## Safety
 
-This project is designed as a read-only lab audit toolkit. It does not make production changes.git add README.md src/main.ps1 src/modules/Get-GroupInventory.psm1 config/settings.json
+This project is designed as a read-only lab audit toolkit. It does not make production changes.
