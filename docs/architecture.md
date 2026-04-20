@@ -9,6 +9,7 @@
 5. `Get-SignInSummary` collects sign-in events and exports `SignInSummary.csv`
 6. `Get-GroupInventory` collects group details and exports `GroupInventory.csv`
 7. `Get-DisabledUserInventory` collects disabled user details and exports `DisabledUserInventory.csv`
+8. `Get-LicensedUserInventory` collects licensed user details and exports `LicensedUserInventory.csv`
 
 ## Configuration model
 
