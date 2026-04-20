@@ -24,3 +24,17 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 ## Safety
 
 This project is designed as a read-only lab audit toolkit. It does not make production changes.
+
+## How to run
+
+1. Connect to Microsoft Graph in PowerShell:
+   `Connect-MgGraph -Scopes "User.Read.All","AuditLog.Read.All" -UseDeviceAuthentication -ContextScope Process`
+
+2. Run the toolkit:
+   `.\src\main.ps1`
+
+## Notes
+
+- This project is for lab and portfolio use
+- It is designed for read-only Microsoft 365 audit validation
+- CSV outputs are excluded from Git tracking by `.gitignore`
