@@ -10,6 +10,8 @@ Import-Module "$PSScriptRoot\modules\Get-DisabledUserInventory.psm1" -Force
 Import-Module "$PSScriptRoot\modules\Get-LicensedUserInventory.psm1" -Force
 Import-Module "$PSScriptRoot\modules\Get-AuthenticationMethodSummary.psm1" -Force
 Import-Module "$PSScriptRoot\modules\Get-ExecutiveSummary.psm1" -Force
+Import-Module "$PSScriptRoot\modules\Get-DirectoryRoleSummary.psm1" -Force
+Import-Module "$PSScriptRoot\modules\Get-DirectoryRoleMembers.psm1" -Force
 
 $settings = Get-ToolkitSettings
 
@@ -27,3 +29,5 @@ Get-DisabledUserInventory -TopCount $settings.UserInventoryTop -OutputFolder $se
 Get-LicensedUserInventory -TopCount $settings.UserInventoryTop -OutputFolder $settings.OutputFolder
 Get-AuthenticationMethodSummary -TopCount $settings.UserInventoryTop -OutputFolder $settings.OutputFolder
 Get-ExecutiveSummary -OutputFolder $settings.OutputFolder
+Get-DirectoryRoleSummary -OutputFolder $settings.OutputFolder
+Get-DirectoryRoleMembers -OutputFolder $settings.OutputFolder

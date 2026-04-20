@@ -12,6 +12,8 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 - Retrieves disabled user inventory from the lab tenant
 - Retrieves licensed user inventory from the lab tenant
 - Retrieves authentication method summary from the lab tenant
+- Retrieves directory role summary from the lab tenant
+- Retrieves directory role members from the lab tenant
 - Generates an executive summary in Markdown
 - Exports audit results to output files
 
@@ -23,6 +25,8 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 - `sample-output/DisabledUserInventory.csv`
 - `sample-output/LicensedUserInventory.csv`
 - `sample-output/AuthenticationMethodSummary.csv`
+- `sample-output/DirectoryRoleSummary.csv`
+- `sample-output/DirectoryRoleMembers.csv`
 - `sample-output/ExecutiveSummary.md`
 
 ## Project structure
@@ -35,7 +39,7 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 ## How to run
 
 1. Connect to Microsoft Graph in PowerShell:
-   `Connect-MgGraph -Scopes "User.Read.All","AuditLog.Read.All","Group.Read.All" -UseDeviceAuthentication -ContextScope Process`
+   `Connect-MgGraph -Scopes "User.Read.All","AuditLog.Read.All","Group.Read.All","RoleManagement.Read.Directory" -UseDeviceAuthentication -ContextScope Process`
 
 2. Run the toolkit:
    `.\src\main.ps1`
