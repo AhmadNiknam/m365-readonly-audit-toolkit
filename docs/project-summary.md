@@ -14,7 +14,8 @@ This project is a read-only Microsoft 365 audit toolkit built in PowerShell for 
 - Disabled user inventory retrieval
 - Licensed user inventory retrieval
 - Authentication method summary retrieval
-- CSV export for all implemented datasets
+- Executive summary generation
+- CSV and Markdown output generation
 - Basic project documentation
 - GitHub version control and publishing
 
@@ -26,3 +27,4 @@ This project is a read-only Microsoft 365 audit toolkit built in PowerShell for 
 - `sample-output/DisabledUserInventory.csv`
 - `sample-output/LicensedUserInventory.csv`
 - `sample-output/AuthenticationMethodSummary.csv`
+- `sample-output/ExecutiveSummary.md`
