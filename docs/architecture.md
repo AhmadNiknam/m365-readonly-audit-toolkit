@@ -11,6 +11,7 @@
 7. `Get-DisabledUserInventory` collects disabled user details and exports `DisabledUserInventory.csv`
 8. `Get-LicensedUserInventory` collects licensed user details and exports `LicensedUserInventory.csv`
 9. `Get-AuthenticationMethodSummary` collects authentication method details and exports `AuthenticationMethodSummary.csv`
+10. `Get-ExecutiveSummary` generates `ExecutiveSummary.md`
 
 ## Configuration model
 
