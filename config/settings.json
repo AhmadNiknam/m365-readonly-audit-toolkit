@@ -1,5 +1,6 @@
 {
-    "UserInventoryTop": 10,
-    "SignInTop": 10,
-    "OutputFolder": "sample-output"
-  }
+  "UserInventoryTop": 10,
+  "SignInTop": 10,
+  "GroupInventoryTop": 10,
+  "OutputFolder": "sample-output"
+}

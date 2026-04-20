@@ -5,14 +5,17 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 ## Current features
 
 - Checks Microsoft Graph connection
+- Reads toolkit settings from `config/settings.json`
 - Retrieves user inventory from the lab tenant
 - Retrieves sign-in summary from the lab tenant
+- Retrieves group inventory from the lab tenant
 - Exports audit results to CSV files
 
 ## Current outputs
 
 - `sample-output/UserInventory.csv`
 - `sample-output/SignInSummary.csv`
+- `sample-output/GroupInventory.csv`
 
 ## Project structure
 
@@ -21,14 +24,10 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 - `docs/` project notes and architecture
 - `sample-output/` generated sample CSV outputs
 
-## Safety
-
-This project is designed as a read-only lab audit toolkit. It does not make production changes.
-
 ## How to run
 
 1. Connect to Microsoft Graph in PowerShell:
-   `Connect-MgGraph -Scopes "User.Read.All","AuditLog.Read.All" -UseDeviceAuthentication -ContextScope Process`
+   `Connect-MgGraph -Scopes "User.Read.All","AuditLog.Read.All","Group.Read.All" -UseDeviceAuthentication -ContextScope Process`
 
 2. Run the toolkit:
    `.\src\main.ps1`
@@ -38,3 +37,7 @@ This project is designed as a read-only lab audit toolkit. It does not make prod
 - This project is for lab and portfolio use
 - It is designed for read-only Microsoft 365 audit validation
 - CSV outputs are excluded from Git tracking by `.gitignore`
+
+## Safety
+
+This project is designed as a read-only lab audit toolkit. It does not make production changes.git add README.md src/main.ps1 src/modules/Get-GroupInventory.psm1 config/settings.json
