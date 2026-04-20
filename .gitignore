@@ -2,3 +2,4 @@ sample-output/*.csv
 *.log
 .vscode/
 .cursor/
+sample-output/ExecutiveSummary.md
