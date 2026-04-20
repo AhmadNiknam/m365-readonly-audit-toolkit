@@ -10,6 +10,7 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 - Retrieves sign-in summary from the lab tenant
 - Retrieves group inventory from the lab tenant
 - Retrieves disabled user inventory from the lab tenant
+- Retrieves licensed user inventory from the lab tenant
 - Exports audit results to CSV files
 
 ## Current outputs
@@ -18,6 +19,7 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 - `sample-output/SignInSummary.csv`
 - `sample-output/GroupInventory.csv`
 - `sample-output/DisabledUserInventory.csv`
+- `sample-output/LicensedUserInventory.csv`
 
 ## Project structure
 
