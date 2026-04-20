@@ -1,0 +1,4 @@
+sample-output/*.csv
+*.log
+.vscode/
+.cursor/
