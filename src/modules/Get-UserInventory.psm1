@@ -1,13 +1,19 @@
 function Get-UserInventory {
     [CmdletBinding()]
-    param()
+    param(
+        [Parameter(Mandatory)]
+        [int]$TopCount,
+
+        [Parameter(Mandatory)]
+        [string]$OutputFolder
+    )
 
     Write-Host "Getting user inventory..."
 
-    $users = Get-MgUser -Top 10 -Property "DisplayName,UserPrincipalName,UserType,AccountEnabled" |
+    $users = Get-MgUser -Top $TopCount -Property "DisplayName,UserPrincipalName,UserType,AccountEnabled" |
         Select-Object DisplayName, UserPrincipalName, UserType, AccountEnabled
 
-    $outputPath = Join-Path $PSScriptRoot "..\..\sample-output\UserInventory.csv"
+    $outputPath = Join-Path $PSScriptRoot "..\..\$OutputFolder\UserInventory.csv"
     $outputPath = [System.IO.Path]::GetFullPath($outputPath)
 
     $users | Export-Csv -Path $outputPath -NoTypeInformation

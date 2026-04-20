@@ -1,15 +1,21 @@
 function Get-SignInSummary {
     [CmdletBinding()]
-    param()
+    param(
+        [Parameter(Mandatory)]
+        [int]$TopCount,
+
+        [Parameter(Mandatory)]
+        [string]$OutputFolder
+    )
 
     Write-Host "Getting sign-in summary..."
 
-    $signIns = Get-MgAuditLogSignIn -Top 10 |
+    $signIns = Get-MgAuditLogSignIn -Top $TopCount |
         Select-Object CreatedDateTime, UserDisplayName, UserPrincipalName, AppDisplayName,
         @{Name = "ErrorCode"; Expression = { $_.Status.ErrorCode }},
         @{Name = "FailureReason"; Expression = { $_.Status.FailureReason }}
 
-    $outputPath = Join-Path $PSScriptRoot "..\..\sample-output\SignInSummary.csv"
+    $outputPath = Join-Path $PSScriptRoot "..\..\$OutputFolder\SignInSummary.csv"
     $outputPath = [System.IO.Path]::GetFullPath($outputPath)
 
     $signIns | Export-Csv -Path $outputPath -NoTypeInformation
