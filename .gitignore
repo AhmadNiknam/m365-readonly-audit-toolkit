@@ -3,3 +3,5 @@ sample-output/*.csv
 .vscode/
 .cursor/
 sample-output/ExecutiveSummary.md
+*.pfx
+*.p12
