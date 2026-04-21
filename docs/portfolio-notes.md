@@ -11,6 +11,8 @@ This project demonstrates hands-on Microsoft 365 lab work using PowerShell and M
 - Read-only audit design
 - Microsoft 365 user and group reporting
 - Sign-in log analysis
+- Authentication method reporting
+- Directory role and role member visibility
 - Settings-based script execution
 - Documentation and GitHub publishing
 
