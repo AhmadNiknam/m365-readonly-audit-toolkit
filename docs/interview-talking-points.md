@@ -14,11 +14,13 @@ I wanted a practical Microsoft 365 lab project that demonstrates hands-on PowerS
 - retrieves disabled user inventory
 - retrieves licensed user inventory
 - retrieves authentication method summary
+- retrieves directory role summary
+- retrieves directory role members
 - generates an executive summary
 
 ## Why it is valuable
 
-This project shows practical Microsoft 365 administration skills, reporting design, modular scripting, documentation discipline, and GitHub publishing.
+This project shows practical Microsoft 365 administration skills, reporting design, modular scripting, documentation discipline, GitHub publishing, and directory role visibility.
 
 ## Key design choice
 
