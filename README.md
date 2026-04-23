@@ -53,3 +53,21 @@ A PowerShell-based read-only audit toolkit for a Microsoft 365 lab tenant.
 ## Safety
 
 This project is designed as a read-only lab audit toolkit. It does not make production changes.
+## Security and Trust
+
+This project includes two trust layers:
+
+- GitHub verified signed commits and signed release tags
+- PowerShell Authenticode signing for script files in `src/`
+
+### Public certificate
+
+The public code-signing certificate is included here:
+
+- `signing/AhmadNiknam-CodeSigning.cer`
+
+### Notes
+
+- Private certificate files such as `.pfx` and `.p12` are not included in the repository
+- Generated outputs remain read-only artifacts
+- Users can review script signatures locally before execution

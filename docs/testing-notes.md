@@ -24,3 +24,11 @@
 - Verified disabled account sign-in failure appears in sign-in logs
 - Verified settings-based execution through `config/settings.json`
 - Verified Global Administrator role appears in directory role reporting
+## Signing validation completed
+
+- Verified PowerShell Authenticode signature on `src/main.ps1`
+- Verified PowerShell Authenticode signatures on all `src/modules/*.psm1` files
+- Confirmed signed scripts execute under `AllSigned` execution policy in the test session
+- Confirmed sensitive certificate files such as `.pfx` and `.p12` are excluded from Git tracking
+- Confirmed GitHub verified signed commit workflow is active
+- Confirmed release/tag workflow has been updated for signed release publishing

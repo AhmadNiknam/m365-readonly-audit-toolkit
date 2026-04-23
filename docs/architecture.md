@@ -23,3 +23,15 @@ The toolkit currently reads these values from `config/settings.json`:
 - `SignInTop`
 - `GroupInventoryTop`
 - `OutputFolder`
+## Trust and signing model
+
+This project uses two verification layers:
+
+- GitHub verified signed commits and signed release tags
+- PowerShell Authenticode signatures on `.ps1` and `.psm1` files
+
+The public code-signing certificate is distributed in the repository for verification use:
+
+- `signing/AhmadNiknam-CodeSigning.cer`
+
+Private signing material is not included in the repository.

@@ -32,3 +32,11 @@ This project is a read-only Microsoft 365 audit toolkit built in PowerShell for 
 - `sample-output/DirectoryRoleSummary.csv`
 - `sample-output/DirectoryRoleMembers.csv`
 - `sample-output/ExecutiveSummary.md`
+## Trust enhancements
+
+The project now includes:
+
+- GitHub verified signed commits
+- Signed release/tag workflow
+- PowerShell Authenticode signing for script files
+- Public certificate distribution for verification
